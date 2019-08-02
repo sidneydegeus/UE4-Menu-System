@@ -18,9 +18,10 @@ Steps to get it working flawlessly:
 
 1. Copy Source code (MenuSystem folder) to new project. e.g. Source/newproject/MenuSystem 
 2. Delete MenuSystemGameModeBase.h / .cpp and MenuSystem.Build.cs
-3. Autoreplace in whole project MENUSYSTEM_API to NEWPROJECTNAME_API
-4. Add "UMG" to the dependency's in the new project's Build.cs.
-5. Add Redirects to DefaultEngine.ini and change newname with given projectname:
+3. Generate Visual Studio files (right click uproject file)
+4. Autoreplace in whole project MENUSYSTEM_API to NEWPROJECTNAME_API
+5. Add "UMG" to the dependency's in the new project's Build.cs.
+6. Add Redirects to DefaultEngine.ini and change newname with given projectname:
 
 [CoreRedirects]
 +ClassRedirects=(MatchSubstring=True,OldName="/MenuSystem",NewName="/NewProjectName")
@@ -28,9 +29,9 @@ Steps to get it working flawlessly:
 +FunctionRedirects=(MatchSubstring=True,OldName="/MenuSystem",NewName="/NewProjectName")
 +StructRedirects=(MatchSubstring=True,OldName="/MenuSystem",NewName="/NewProjectName")
 
-6. If UnrealEditor with new project is open, close and re-open so that the .ini changes can take effect.
-7. Open MenuSystem project and use the Migrate tool in UE4 for the MenuSystem folder so that the assets / blueprints get migrated to the new project.
-8. Open a MenuSystem blueprint in the new project to see if it opens succesfully. If so, congrats. If not, delete MenuSystem content from new project and repeat from step 6.
+7. If UnrealEditor with new project is open, close and re-open so that the .ini changes can take effect.
+8. Open MenuSystem project and use the Migrate tool in UE4 for the MenuSystem folder so that the assets / blueprints get migrated to the new project.
+9. Open a MenuSystem blueprint in the new project to see if it opens succesfully. If so, congrats. If not, delete MenuSystem content from new project and repeat from step 7.
 
 Finally, after the newly migrated assets and maps are opened in the new project, there may be errors/warnings for the copied C++ classes. A resave of those assets will clear those errors.
 
