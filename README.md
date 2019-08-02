@@ -8,4 +8,4 @@ Because UE4 is a bit lame in regards of using additional projects within the sol
 
 https://wiki.unrealengine.com/Migrate_content_between_projects
 
-
+Also add "UMG" to the dependency's in Build.cs for the menu system to work.
