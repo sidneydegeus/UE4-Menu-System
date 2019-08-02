@@ -17,7 +17,7 @@ Because UE4 is a bit lame in regards of using additional projects within the sol
 Steps to get it working flawlessly:
 
 1. Copy Source code (MenuSystem folder) to new project. e.g. Source/newproject/MenuSystem 
-2. Delete MenuSystemGameModeBase.h / .cpp and MenuSystem.Build.cs
+2. Delete MenuSystemGameModeBase.cpp/.h, MenuSystem.cpp/.h and MenuSystem.Build.cs
 3. Generate Visual Studio files (right click uproject file)
 4. Autoreplace in whole project MENUSYSTEM_API to NEWPROJECTNAME_API
 5. Add "UMG" to the dependency's in the new project's Build.cs.
