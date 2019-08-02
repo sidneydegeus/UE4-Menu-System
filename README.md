@@ -8,4 +8,13 @@ Because UE4 is a bit lame in regards of using additional projects within the sol
 
 https://wiki.unrealengine.com/Migrate_content_between_projects
 
+As stated in the URL. Just easier not having to copy paste the old name for the DefaultEngine.ini:
+
+[CoreRedirects]
++ClassRedirects=(MatchSubstring=True,OldName="/MenuSystem",NewName="/NewProjectName")
++EnumRedirects=(MatchSubstring=True,OldName="/MenuSystem",NewName="/NewProjectName")
++FunctionRedirects=(MatchSubstring=True,OldName="/MenuSystem",NewName="/NewProjectName")
++StructRedirects=(MatchSubstring=True,OldName="/MenuSystem",NewName="/NewProjectName")
+
+
 Also add "UMG" to the dependency's in Build.cs for the menu system to work.
