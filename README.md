@@ -24,14 +24,16 @@ Steps to get it working flawlessly:
 6. Add Redirects to DefaultEngine.ini and change newname with given projectname:
 
 [CoreRedirects]
-+ClassRedirects=(MatchSubstring=True,OldName="/MenuSystem",NewName="/NewProjectName")
-+EnumRedirects=(MatchSubstring=True,OldName="/MenuSystem",NewName="/NewProjectName")
-+FunctionRedirects=(MatchSubstring=True,OldName="/MenuSystem",NewName="/NewProjectName")
-+StructRedirects=(MatchSubstring=True,OldName="/MenuSystem",NewName="/NewProjectName")
+<br>+ClassRedirects=(MatchSubstring=True,OldName="/MenuSystem",NewName="/NewProjectName")
+<br>+EnumRedirects=(MatchSubstring=True,OldName="/MenuSystem",NewName="/NewProjectName")
+<br>+FunctionRedirects=(MatchSubstring=True,OldName="/MenuSystem",NewName="/NewProjectName")
+<br>+StructRedirects=(MatchSubstring=True,OldName="/MenuSystem",NewName="/NewProjectName")
 
-7. If UnrealEditor with new project is open, close and re-open so that the .ini changes can take effect.
-8. Open MenuSystem project and use the Migrate tool in UE4 for the MenuSystem folder so that the assets / blueprints get migrated to the new project.
-9. Open a MenuSystem blueprint in the new project to see if it opens succesfully. If so, congrats. If not, delete MenuSystem content from new project and repeat from step 7.
+7. Open MenuSystem project and use the Migrate tool in UE4 for the MenuSystem folder so that the assets / blueprints get migrated to the new project.
+8. Close Unreal Editor
+9. Generate new visual studio files for the .ini changes to take effect.  
+10. Open project
+11. Open a MenuSystem blueprint in the new project to see if it opens succesfully. If so, congrats. If not, delete MenuSystem content from new project and repeat from step 7.
 
 Finally, after the newly migrated assets and maps are opened in the new project, there may be errors/warnings for the copied C++ classes. A resave of those assets will clear those errors.
 
